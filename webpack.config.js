@@ -4,8 +4,7 @@ var path = require('path');
 
 module.exports = {
   entry: {
-    "controller": "./src/controller.js",
-    "player": "./src/player.js"
+    "main": "./src/main.js"
   },
   output: {
     path: "./app/js",
@@ -33,14 +32,6 @@ module.exports = {
         loader: 'url?name=../font/[name].[ext]&limit=100000'
       },
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: "babel",
-        query: {
-          presets: ['es2015']
-        }
-      },
-      {
         test: /\.json$/,
         loaders: ['json']
       },
@@ -61,9 +52,7 @@ module.exports = {
   plugins: [
     new webpack.ExternalsPlugin('commonjs', ['electron', 'screen', 'remote']),
     new WebpackNotifierPlugin({title: 'Webpack'}),
+    new webpack.DefinePlugin({ 'process.env.NODE_ENV': '"development"' })
   ],
-  devtool: "#source-map",
-  devServer: {
-    contentBase: "./"
-  }
+  devtool: "#eval"
 }

@@ -4,7 +4,7 @@
   "description": "Shinchoku builder",
   "main": "./app/main.js",
   "scripts": {
-    "start": "DEBUG=true electron ./app",
+    "start": "DEBUG=true electron ./app/main.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack -w",
     "build": "webpack",
@@ -28,6 +28,8 @@
     "file-loader": "0.8.5",
     "gulp": "^3.9.1",
     "img-loader": "^1.2.2",
+    "jade": "^1.11.0",
+    "jade-loader": "^0.8.0",
     "json-loader": "0.5.4",
     "style-loader": "^0.13.1",
     "stylus": "0.54.5",
