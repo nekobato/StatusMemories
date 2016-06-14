@@ -1,9 +1,9 @@
 const Vue = require('vue')
 
-const store = require('./store')
+const store = require('./vuex/store')
 
 new Vue({
   el: 'body',
-  template: require('./template.jade'),
+  template: require('./template.jade')(),
   store
 })

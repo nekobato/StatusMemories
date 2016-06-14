@@ -7,7 +7,7 @@
     "start": "DEBUG=true electron ./app/main.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack -w",
-    "build": "webpack",
+    "build": "gulp webpack",
     "release": "gulp release"
   },
   "license": "MIT",
@@ -23,8 +23,6 @@
   "homepage": "https://github.com/nekobato/Symchokit#readme",
   "devDependencies": {
     "css-loader": "0.23.1",
-    "electron-packager": "7.0.3",
-    "electron-prebuilt": "1.2.1",
     "file-loader": "0.8.5",
     "gulp": "^3.9.1",
     "img-loader": "^1.2.2",
@@ -39,6 +37,8 @@
     "webpack-notifier": "^1.3.0"
   },
   "dependencies": {
+    "electron-prebuilt": "1.2.1",
+    "electron-packager": "7.0.3",
     "material-design-icons": "2.2.3",
     "materialize-css": "0.97.6",
     "vue": "1.0.24",

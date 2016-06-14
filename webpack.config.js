@@ -33,19 +33,19 @@ module.exports = {
       },
       {
         test: /\.json$/,
-        loaders: ['json']
+        loaders: 'json'
       },
       {
         test: /\.jade$/,
-        loader: "jade"
+        loader: 'jade'
       },
       {
         test: /\.styl$/,
-        loader: "style!css!stylus"
+        loader: 'style!css!stylus'
       },
       {
         test: /\.css$/,
-        loader: "style!css"
+        loader: 'style!css'
       },
     ]
   },

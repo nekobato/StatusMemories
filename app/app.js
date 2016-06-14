@@ -1,8 +1,8 @@
 const {BrowserWindow} = require('electron')
 
 const windowSize = {
-  width: 500,
-  height: 400
+  width: 800,
+  height: 600
 }
 
 module.exports = class {
@@ -14,7 +14,7 @@ module.exports = class {
       height: windowSize.height,
       show: true,
       resizable: false,
-      frame: false,
+      frame: true,
       transparent: false,
       skipTaskbar: true,
       hasShadow: false
@@ -23,7 +23,7 @@ module.exports = class {
     this.win.setVisibleOnAllWorkspaces(true)
 
     this.win.on('blur', () => {
-      this.win.hide()
+      // this.win.hide()
     })
 
     this.win.loadURL('file://' + __dirname + '/app.html')
