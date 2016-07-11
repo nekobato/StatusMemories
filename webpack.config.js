@@ -24,6 +24,16 @@ module.exports = {
   module: {
     loaders: [
       {
+        test: /\.js$/,
+        include: [path.resolve(__dirname, 'src')],
+        loader: 'babel',
+        query: {
+          cacheDirectory: true,
+          presets: ['es2015', 'stage-0'],
+          plugins: 'add-module-exports'
+        }
+      },
+      {
         test: /.(gif|jpg|png)(\?[a-z0-9=\.]+)?$/,
         loader: 'url?name=../img/[name].[ext]&limit=100000'
       },

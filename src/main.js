@@ -1,9 +1,12 @@
-const Vue = require('vue')
-
-const store = require('./vuex/store')
+import Vue from 'vue'
+import store from './store'
 
 new Vue({
   el: 'body',
+  replace: false,
   template: require('./template.jade')(),
-  store
+  store,
+  components: {
+    'task-list': require('./components/task-list')
+  }
 })
