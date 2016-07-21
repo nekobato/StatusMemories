@@ -11,6 +11,12 @@ const debug = process.env.NODE_ENV !== 'production'
 
 export default new Vuex.Store({
   strict: debug,
-  state: {},
+  state: {
+    todos: [
+      1,
+      2,
+      3
+    ]
+  },
   mutations: mutations
 })

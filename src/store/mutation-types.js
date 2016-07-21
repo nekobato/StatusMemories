@@ -1,1 +1,1 @@
-export const SOME_MUTATION = 'SOME_MUTATION'
+export const ADD_TODO = 'ADD_TODO'

@@ -1,9 +1,7 @@
-const types = require('./mutation-types')
+import * as types from './mutation-types'
 
-export const addToCart = ({ dispatch }, product) => {
-  if (product.inventory > 0) {
-    dispatch(types.ADD_TO_CART, product.id)
-  }
+export const addTodo = ({ dispatch }, todo) => {
+  dispatch(types.ADD_TODO, todo)
 }
 
 export const checkout = ({ dispatch, state }, products) => {
