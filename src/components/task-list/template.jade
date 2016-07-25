@@ -1,6 +1,6 @@
 ul.collection(:class="styles.list")
   li.collection-item(v-for="todo in todos" track-by="$index")
-    span hoge
+    span {{todo}}
   li.collection-item
     form(@submit.prevent="onSubmit")
       div.input-field

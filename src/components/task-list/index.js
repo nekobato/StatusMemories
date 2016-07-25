@@ -17,7 +17,8 @@ export default {
   },
   methods: {
     onSubmit (e) {
-      this.addTodo('hoge')
+      if (!e.target[0].value) return
+      this.addTodo(e.target[0].value)
     }
   }
 }
